@@ -9,7 +9,7 @@ export default function About() {
         <div className="aboutCard">
           <h1 className="title">About Us</h1>
           <p className="description">
-            Welcome to Sahiba's Kitchen! Our journey began two years ago when Kanwal Samuel, a passionate home chef, started creating delightful dishes from the comfort of home. Today, we proudly serve as a popular restaurant, offering a variety of Pakistani and Chinese cuisines, along with mouth-watering BBQ and much more. We serve delicious, healthy food with love, aiming to provide an unforgettable dining experience.
+            Welcome to Sahiba&apos;s Kitchen! Our journey began two years ago when Kanwal Samuel, a passionate home chef, started creating delightful dishes from the comfort of home. Today, we proudly serve as a popular restaurant, offering a variety of Pakistani and Chinese cuisines, along with mouth-watering BBQ and much more. We serve delicious, healthy food with love, aiming to provide an unforgettable dining experience.
           </p>
         </div>
 
@@ -17,7 +17,7 @@ export default function About() {
           <h2 className="subtitle">Customer Comments</h2>
           <div className="commentsGrid">
             <div className="commentBox">
-              <p><strong>Saima:</strong> &quot;The biryani here is absolutely delicious! It’s full of flavor and cooked to perfection.&quot;</p>
+              <p><strong>Saima:</strong> &quot;The biryani here is absolutely delicious! It&apos;s full of flavor and cooked to perfection.&quot;</p>
               <div className="stars">★★★★★</div>
             </div>
             <div className="commentBox">
@@ -46,7 +46,7 @@ export default function About() {
 
           <h2 className="subtitle">Our Mission</h2>
           <p className="text">
-            At Sahiba's Kitchen, our mission is to provide nutritious meals made from the freshest ingredients. We believe that food should not only taste good but also nourish the body and soul.
+            At Sahiba&apos;s Kitchen, our mission is to provide nutritious meals made from the freshest ingredients. We believe that food should not only taste good but also nourish the body and soul.
           </p>
           <Link href="/" className="link">Back to Home</Link>
         </div>
