@@ -1,200 +1,175 @@
-'use client';
+"use client";
+import Link from "next/link";
 
-import Image from "next/image";
-
-export default function Home() {
+export default function About() {
   return (
     <div className="container">
-      <div className="card">
-        <div className="background-image"></div> {/* Background image div */}
+      <div className="background-image"></div>
+      <div className="aboutWrapper">
+        <div className="aboutCard">
+          <h1 className="title">About Us</h1>
+          <p className="description">
+            Welcome to Sahiba Kitchen! Our journey began two years ago when Kanwal Samuel, a passionate home chef, started creating delightful dishes from the comfort of home. Today, we proudly serve as a popular restaurant, offering a variety of Pakistani and Chinese cuisines, along with mouth-watering BBQ and much more. We serve delicious, healthy food with love, aiming to provide an unforgettable dining experience.
+          </p>
+        </div>
 
-        <div className="content">
-          <div className="logo-container">
-            <Image
-              src="/images/download.jpg" // Ensure this path is correct
-              alt="Kitchen Logo"
-              width={200}  // Updated to 200px
-              height={200}
-              className="logo"
-              priority
-            />
+        <div className="commentsCard">
+          <h2 className="subtitle">Customer Comments</h2>
+          <div className="commentsGrid">
+            <div className="commentBox">
+              <p><strong>Saima:</strong> "The biryani here is absolutely delicious! It’s full of flavor and cooked to perfection."</p>
+              <div className="stars">★★★★★</div>
+            </div>
+            <div className="commentBox">
+              <p><strong>Dr. Madiha:</strong> "I loved the paratha, Highway style Karahi! Parathas are crispy on the outside and soft on the inside. Highly recommended!"</p>
+              <div className="stars">★★★★★</div>
+            </div>
+            <div className="commentBox">
+              <p><strong>Saeeda Sana:</strong> "The Mutton karahi is my favorite! The spices are just right, making it a must-try dish."</p>
+              <div className="stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="serviceCard">
+          <h2 className="subtitle">Happy Hour</h2>
+          <div className="iconText">
+            <div className="icon">🍹</div>
+            <p className="text">Join us for Happy Hour from 5 PM to 7 PM! Enjoy special discounts on drinks and appetizers.</p>
           </div>
 
-          <h1 className="heading">Welcome to Sahiba&apos;s Kitchen</h1>
-          <p className="paragraph">
-            Welcome to Sahiba&apos;s Kitchen, where flavor meets tradition! Our culinary journey is dedicated to bringing you a delightful experience, blending authentic recipes with a modern twist. From the moment you step into our warm and inviting atmosphere, you’ll be greeted with the rich aromas of freshly prepared dishes made from the finest local ingredients. Whether you’re here for a cozy family meal, a celebratory gathering, or a quick bite, our diverse menu has something for everyone. Join us as we take you on a gastronomic adventure that celebrates the love of food and the joy of togetherness. Experience the heart of our kitchen and let us create unforgettable memories for you and your loved ones!
+          <h2 className="subtitle">Dine In</h2>
+          <div className="iconText">
+            <div className="icon">🍽</div>
+            <p className="text">Experience our cozy atmosphere by dining in. We guarantee a delightful meal served with warm hospitality.</p>
+          </div>
+
+          <h2 className="subtitle">Our Mission</h2>
+          <p className="text">
+            At Amyas Kitchen, our mission is to provide nutritious meals made from the freshest ingredients. We believe that food should not only taste good but also nourish the body and soul.
           </p>
+          <Link href="/" className="link">Back to Home</Link>
         </div>
       </div>
 
       <style jsx>{`
-        .container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-          padding: 2rem;
-        }
-
-        .card {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          max-width: 1400px;
-          border-radius: 20px;
-          padding: 3rem;
-          box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-          text-align: center;
-          border: 8rem solid transparent;
-          border-left-color: #FF6500;
-          border-right-color: #FF6500;
-        }
-
         .background-image {
-          position: absolute;
+          background-image: url('/bg2.jpeg');
+          background-size: cover;
+          background-position: center;
+          position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
           z-index: -1;
-          background-image: url('/bg resturant.jpeg');
-          background-size: cover;
-          background-position: center;
-          border-radius: 20px;
+          opacity: 0.7;
         }
 
-        .content {
-          z-index: 2;
-          position: relative;
-          padding: 2rem;
-        }
-
-        .logo-container {
+        .container {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-bottom: 2rem;
-          width: 180px;
-          height: 180px;
-          border-radius: 50%;
-          overflow: hidden;
-          border: 15px solid green;
-          box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
-          animation: rotateLogo 20s infinite;
-        }
-
-        .logo {
-          object-fit: cover;
+          min-height: 100vh;
+          position: relative;
           width: 100%;
-          height: 100%;
+          padding: 20px;
+          box-sizing: border-box;
         }
 
-        @keyframes rotateLogo {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        .heading {
-          font-size: 4rem;
-          color: #FF6500;
-          margin-bottom: 1.5rem;
-          font-family: 'Arial', sans-serif;
-        }
-
-        .paragraph {
-          font-size: 1.6rem;
-          color: black;
-          line-height: 1.8;
-          max-width: 900px;
+        .aboutWrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          max-width: 1200px;
           margin: 0 auto;
-          padding: 0 1rem;
+        }
+
+        .aboutCard, .commentsCard, .serviceCard {
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+          margin: 20px 0;
+          width: 100%;
+          max-width: 600px;
+          text-align: center;
+        }
+
+        .commentsCard {
+          background-color: rgba(240, 240, 240, 0.8);
+        }
+
+        .title {
+          font-size: 2.5rem;
+          color: #333;
+          margin-bottom: 1rem;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .subtitle {
+          font-size: 1.8rem;
+          color: #ff6347;
+          margin-top: 2rem;
+          font-family: 'Poppins', sans-serif;
+          text-transform: uppercase;
+        }
+
+        .description, .text {
+          font-size: 1.1rem;
+          color: #555;
+          margin-bottom: 1.5rem;
+          line-height: 1.6;
           text-align: justify;
         }
 
-        /* Media Queries for Different Screen Sizes */
-
-        @media (max-width: 768px) {
-          .logo-container {
-            width: 180px;
-            height: 180px;
-          }
-
-          .heading {
-            font-size: 1.5rem;
-          }
-
-          .paragraph {
-            font-size: 1rem;
-            max-width: 100%;
-          }
+        .commentBox {
+          padding: 15px;
+          border: 1px solid #ff6347;
+          border-radius: 10px;
+          background-color: #A7E6FF;
+          font-size: 1rem;
         }
 
-        @media (max-width: 480px) {
-          .logo-container {
-            width: 150px;
-            height: 150px;
-          }
-
-          .heading {
-            font-size: 1rem;
-          }
-
-          .paragraph {
-            font-size: 0.5rem;
-          }
-
-          .card {
-            padding: 2rem;
-            border-left-width: 2rem;
-            border-right-width: 2rem;
-          }
+        .stars {
+          color: #ff6347;
+          font-size: 1.2rem;
         }
 
-        @media (max-width: 300px) {
-          .logo-container {
-            width: 130px;
-            height: 130px;
-          }
-
-          .heading {
-            font-size: 1rem;
-          }
-
-          .paragraph {
-            font-size: 0.5rem;
-          }
-
-          .card {
-            padding: 1.5rem;
-            border-left-width: 4rem;
-            border-right-width: 4rem;
-          }
+        .iconText {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 15px 0;
+          padding: 10px;
+          background-color: #f1f1f1;
+          border-radius: 5px;
         }
 
-        @media (max-width: 230px) {
-          .logo-container {
-            width: 100px;
-            height: 100px;
-          }
+        .link {
+          display: inline-block;
+          margin-top: 1.5rem;
+          padding: 10px 20px;
+          background-color: #ff6347;
+          color: white;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: background-color 0.3s;
+        }
 
-          .heading {
-            font-size: 0.6rem;
-          }
+        .link:hover {
+          background-color: #e5533e;
+        }
 
-          .paragraph {
-            font-size: 0.3rem;
+        /* Additional Media Queries */
+        @media (max-width: 600px) {
+          .aboutCard, .commentsCard, .serviceCard {
+            padding: 15px;
           }
-
-          .card {
-            padding: 1rem;
-            border-left-width: 3rem;
-            border-right-width: 3rem;
+          .title, .subtitle, .description, .text {
+            font-size: 1rem;
           }
         }
       `}</style>
